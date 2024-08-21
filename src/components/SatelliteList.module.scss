@@ -1,0 +1,35 @@
+.list {
+  //background-color: red;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.filters {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 10px;
+
+  .header {
+    p {
+      margin: 0;
+      font-weight: bold;
+    }
+  }
+
+  div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    select {
+      padding: 5px;
+      font-size: 14px;
+      border-radius: 8px;
+    }
+  }
+}

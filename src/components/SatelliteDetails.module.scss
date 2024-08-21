@@ -1,0 +1,131 @@
+.content {
+  padding: 60px 10px 10px 10px;
+  width: calc(100% - 20px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  h3 {
+    margin: 20px 0 0 0;
+  }
+
+  .info {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.5);
+
+    p {
+      font-size: 14px;
+      font-weight: bold;
+      margin: 0;
+    }
+
+    .notFound {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-size: 14px;
+      font-weight: bold;
+      margin: 0;
+      opacity: 0; /* Элемент сначала невидим */
+      transform: translateY(10px); /* Сдвиг элемента вниз */
+      animation: fadeIn 0.5s ease-in-out 1s forwards; /* Задержка в 1 секунду, затем анимация */
+
+      p {
+        font-size: 14px;
+        font-weight: bold;
+        margin: 0;
+      }
+
+      button {
+        font-size: 14px;
+        font-weight: bold;
+        padding: 8px 16px;
+        margin-top: 5px;
+        cursor: pointer;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 8px;
+
+        transition: all .3s ease-in-out;
+
+        &:hover {
+          background-color: #005dcb;
+          transform: scale(1.05);
+        }
+      }
+    }
+  }
+
+  button {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    align-self: flex-start;
+    margin-bottom: 10px;
+
+    font-size: 14px;
+    font-weight: bold;
+    padding: 8px 16px;
+    margin-top: 5px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+
+    transition: all .3s ease-in-out;
+
+    &:hover {
+      background-color: #005dcb;
+      transform: scale(1.05);
+    }
+  }
+
+  .charts {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    .chartContainer {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      width: 100%;
+      //height: 80%; /* Высота контейнера с графиком - половина от родительского блока */
+      //width: 50%; /* Ширина на 100% */
+      //margin-bottom: 20px; /* Отступ снизу для разделения графиков */
+
+      h3 {
+        margin: 20px 0 0 0;
+      }
+    }
+  }
+}
+
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0); /* Возвращаем элемент в исходное положение */
+  }
+}
